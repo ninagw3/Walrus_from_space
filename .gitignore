@@ -151,3 +151,5 @@ gen
 # Local project files
 data/
 train/
+/train.zip
+/notebooks.zip
