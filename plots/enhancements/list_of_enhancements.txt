@@ -1,0 +1,17 @@
+
+enhancements = {
+    'Original': ndvi,
+    'Gamma 0.2': gammaEn1,
+    'Gamma 0.5': gammaEn2,
+    'Gamma 1': gammaEn3,
+    'Log': logEn1,
+    'Inverse Log': logEn2,
+    'Sigmoid 0.5': sigmoidEn1,
+    'Sigmoid 0.9': sigmoidEn2,
+    'Sigmoid 0.05': sigmoidEn3,
+    'Sigmoid 0.1': sigmoidEn4,
+    'Adaptive 0.08': adaptiveEn1,
+    'Adaptive 0.9': adaptiveEn2,
+    'Adaptive 0.02': adaptiveEn3,
+    'Equalized': equalizeEn
+}
