@@ -6,6 +6,7 @@ jupyter
 matplotlib
 numpy
 pandas
+plotly
 python
 scikit-learn
 scikit-image
