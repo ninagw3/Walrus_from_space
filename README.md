@@ -3,6 +3,12 @@ This GitHub is the code used for the Masters of Research Project for the Cambrid
 
 **Walrus from space, using satellite images to monitor walrus haul-ours across Svalbard.**
 
+
+## Acknowledgements
+
+This project is made in collaboration with the University of Cambridge and the British Antarctic Survey.
+
+
 ## Use
 ### Installing dependencies
 
@@ -17,9 +23,11 @@ pip install -r requirement.txt
 ## Structure
 
 ### Data
-The data has been collected and is under .......
+All images used for this study are owned by [Planet](https://www.planet.com/) and therefore can not be made public.
+
 
 Data should place in a folder called `data`, in the same folder as `notebooks`.
+The data folder structure is explained at the end of the README.md.
 
 ### Notebooks
 The notebooks show all the different explorations taken.
@@ -64,20 +72,252 @@ notebooks
 
 Some noteworthy notebooks are:
 `1_open_explore_data/1.1_data_analysis/PCA_Analysis_cluster_labels` which shows some of the PCA of the data.
-Include images?
+![2d Plot of the PCAs for the different classes](E:\PycharmProjects\nina\walrus\plots\pca\pca_2d.png "2d Plot of the PCAs")
 
 
 `3_class_imbalance/class_imbalance_using_spectral.ipynb` shows Welch's t-test, ANOVA, and Kruskal-Wallis H Test for 
 .... and include a table.
+```
+Welch's ANOVA for Coast_blue
+                 sum_sq         df           F  PR(>F)
+C(labels)  1.517929e+11        5.0  43400.1523     0.0
+Residual   8.488411e+11  1213490.0         NaN     NaN
+
+Welch's ANOVA for Blue
+                 sum_sq         df             F  PR(>F)
+C(labels)  1.108665e+11        5.0  39227.957861     0.0
+Residual   6.859157e+11  1213490.0           NaN     NaN
+
+Welch's ANOVA for Green1
+                 sum_sq         df             F  PR(>F)
+C(labels)  1.410607e+11        5.0  46444.281349     0.0
+Residual   7.371230e+11  1213490.0           NaN     NaN
+
+Welch's ANOVA for Green
+                 sum_sq         df             F  PR(>F)
+C(labels)  1.736515e+11        5.0  67021.644642     0.0
+Residual   6.288246e+11  1213490.0           NaN     NaN
+
+Welch's ANOVA for Yellow
+                 sum_sq         df              F  PR(>F)
+C(labels)  2.955012e+11        5.0  101620.885017     0.0
+Residual   7.057364e+11  1213490.0            NaN     NaN
+
+Welch's ANOVA for Red
+                 sum_sq         df              F  PR(>F)
+C(labels)  3.030000e+11        5.0  131482.330424     0.0
+Residual   5.592956e+11  1213490.0            NaN     NaN
+
+Welch's ANOVA for Red_edge
+                 sum_sq         df              F  PR(>F)
+C(labels)  3.765338e+11        5.0  174539.066833     0.0
+Residual   5.235733e+11  1213490.0            NaN     NaN
+
+Welch's ANOVA for NIR
+                 sum_sq         df              F  PR(>F)
+C(labels)  4.792210e+11        5.0  265137.763494     0.0
+Residual   4.386625e+11  1213490.0            NaN     NaN
 
 
-`4_random_forest/smart_RF_up_down_samp_allislands.ipynb` Tomek  Links under-sampling
+          Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+========================================================================
+   group1       group2     meandiff  p-adj    lower      upper    reject
+------------------------------------------------------------------------
+  freshwater          ice   681.8746    0.0   672.7801    690.969   True
+  freshwater        ocean -1275.9772    0.0  -1284.735 -1267.2194   True
+  freshwater         rock  -289.5934    0.0  -299.8182  -279.3686   True
+  freshwater walrus_mixed   137.1189    0.0    76.7517   197.4861   True
+  freshwater  walrus_pure   408.2282    0.0   160.7795    655.677   True
+         ice        ocean -1957.8518    0.0 -1961.5321 -1954.1715   True
+         ice         rock   -971.468    0.0  -977.9016  -965.0343   True
+         ice walrus_mixed  -544.7557    0.0  -604.5975  -484.9138   True
+         ice  walrus_pure  -273.6463 0.0201  -520.9674   -26.3252   True
+       ocean         rock   986.3838    0.0   980.4356    992.332   True
+       ocean walrus_mixed  1413.0961    0.0  1353.3045  1472.8877   True
+       ocean  walrus_pure  1684.2054    0.0  1436.8965  1931.5144   True
+        rock walrus_mixed   426.7123    0.0   366.6883   486.7363   True
+        rock  walrus_pure   697.8216    0.0   450.4564   945.1869   True
+walrus_mixed  walrus_pure   271.1093 0.0289      16.69   525.5287   True
+------------------------------------------------------------------------
+```
+Kruskal-Wallis H:
+
+| Band         | H-stat             | p-value |
+|--------------|--------------------|---------|
+| Coastal Blue | 396695.54089294106 | 0.0     |
+| Blue         | 382913.7400329306  | 0.0     |
+| Green1       | 401448.69158046786 | 0.0     |
+| Green        | 495364.98787667963 | 0.0     |
+| Yellow       | 603380.0017913427  | 0.0     |
+| Red          | 665949.4517667058  | 0.0     |
+| Red_edge     | 723429.833556239   | 0.0     |
+| Nir          | 794831.4159363415  | 0.0     |
+
+
+
+Manova:
+
+| Intercept              | Value  | Num DF | Den DF       | F Value    | Pr > F |
+|------------------------|--------|--------|--------------|------------|--------|
+| Wilks' lambda          | 0.7049 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
+| Pillai's trace         | 0.2951 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
+| Hotelling-Lawley trace | 0.4186 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
+| Roy's greatest root    | 0.4186 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
+
+| C(encoded_labels       | Value  | Num DF  | Den DF       | F Value     | Pr > F |
+|------------------------|--------|---------|--------------|-------------|--------|
+| Wilks' lambda          | 0.1357 | 40.0000 | 5289452.5612 | 76870.6043  | 0.0000 |
+| Pillai's trace         | 1.1144 | 40.0000 | 6067435.0000 | 43504.4206  | 0.0000 |
+| Hotelling-Lawley trace | 4.5905 | 40.0000 | 3640435.0001 | 139263.2151 | 0.0000 |
+| Roy's greatest root    | 4.1838 | 8.0000  | 1213487.0000 | 634626.7833 | 0.0000 |
+
+
+
+`4_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb` Tomek  Links under-sampling
 
 
 ## Results
+
+### Plots
+Some of the save plots from the different notebooks
 
 
 ## License
 
 
-## Acknowledgements
+## Data Folder Structure
+The structure of `data/train` is expected to be:
+
+```
+train
+│   Buchholzbukta_gis.aprx
+│   Buchholzbukta_gis.atbx
+│
+├── clipped_groundtruth
+│       island_YYYYMMDD_groundtruth.tfw
+│       island_YYYYMMDD_groundtruth.tif
+│       island_YYYYMMDD_groundtruth.tif.aux.xml
+│       island_YYYYMMDD_groundtruth.tif.ovr
+│
+├── clipped_images
+│       island_YYYYMMDD_image.tfw
+│       island_YYYYMMDD_image.tif
+│       island_YYYYMMDD_image.tif.aux.xml
+│
+├── clipped_train
+│       island_YYYYMMDD_train.cpg
+│       island_YYYYMMDD_train.dbf
+│       island_YYYYMMDD_train.prj
+│       island_YYYYMMDD_train.sbn
+│       island_YYYYMMDD_train.sbx
+│       island_YYYYMMDD_train.shp
+│       island_YYYYMMDD_train.shp.xml
+│       island_YYYYMMDD_train.shx
+│
+├── clipped_unlabeled
+│   │   island_YYYYMMDD_image.tfw
+│   │   island_YYYYMMDD_image.tif
+│   │   island_YYYYMMDD_image.tif.aux.xml
+│   │
+│   └── walrus_shapefiles
+│           island_YYYYMMDD_walrus.cpg
+│           island_YYYYMMDD_walrus.dbf
+│           island_YYYYMMDD_walrus.prj
+│           island_YYYYMMDD_walrus.sbn
+│           island_YYYYMMDD_walrus.sbx
+│           island_YYYYMMDD_walrus.shp
+│           island_YYYYMMDD_walrus.shp.xml
+│           island_YYYYMMDD_walrus.shx
+│
+├── images
+│       island_YYYYMMDD_image.json
+│       island_YYYYMMDD_image.tif
+│       island_YYYYMMDD_image.tif.aux.xml
+│       island_YYYYMMDD_image.tif.ovr
+│       island_YYYYMMDD_image.xml
+│       island_YYYYMMDD_image_metadata.json
+│       island_YYYYMMDD_image.json
+│
+├── island_by_island
+│   ├── island_1_groundtruth
+│   │       island_YYYYMMDD_groundtruth.tfw
+│   │       island_YYYYMMDD_groundtruth.tif
+│   │       island_YYYYMMDD_groundtruth.tif.aux.xml
+│   │       island_YYYYMMDD_groundtruth.tif.ovr
+│   │
+│   ├── island_1_image
+│   │       island_YYYYMMDD_image.tfw
+│   │       island_YYYYMMDD_image.tif
+│   │       island_YYYYMMDD_image.tif.aux.xml
+│   │
+│   ├── island_1_train
+│   │       island_YYYYMMDD_train.cpg
+│   │       island_YYYYMMDD_train.dbf
+│   │       island_YYYYMMDD_train.prj
+│   │       island_YYYYMMDD_train.sbn
+│   │       island_YYYYMMDD_train.sbx
+│   │       island_YYYYMMDD_train.shp
+│   │       island_YYYYMMDD_train.shp.xml
+│   │       island_YYYYMMDD_train.shx
+│   │
+│   └── island_1_unseen
+│           island_YYYYMMDD_image.tfw
+│           island_YYYYMMDD_image.tif
+│           island_YYYYMMDD_image.tif.aux.xml
+│
+├── mess_about_folder
+│   │   island_YYYYMMDD_image.clip.tif
+│   │
+│   ├── groundtruth
+│   │       island_YYYYMMDD_groundtruth.tfw
+│   │       island_YYYYMMDD_groundtruth.tif
+│   │       island_YYYYMMDD_groundtruth.tif.aux.xml
+│   │       island_YYYYMMDD_groundtruth.tif.ovr
+│   │
+│   ├── images_1
+│   │       island_YYYYMMDD_image.json
+│   │       island_YYYYMMDD_image.tif
+│   │       island_YYYYMMDD_image.tif.aux.xml
+│   │       island_YYYYMMDD_image.tif.ovr
+│   │       island_YYYYMMDD_image.xml
+│   │       island_YYYYMMDD_image_metadata.json
+│   │       island_YYYYMMDD_image_udm2_clip.tif
+│   │
+│   └── shapefiles_1
+│           island_YYYYMMDD_train.cpg
+│           island_YYYYMMDD_train.dbf
+│           island_YYYYMMDD_train.prj
+│           island_YYYYMMDD_train.shp
+│           island_YYYYMMDD_train.shp.xml
+│           island_YYYYMMDD_train.shx
+│
+├── shapefile
+│       island_YYYYMMDD_train.cpg
+│       island_YYYYMMDD_train.dbf
+│       island_YYYYMMDD_train.prj
+│       island_YYYYMMDD_train.sbn
+│       island_YYYYMMDD_train.sbx
+│       island_YYYYMMDD_train.shp
+│       island_YYYYMMDD_train.shp.xml
+│       island_YYYYMMDD_train.shx
+│
+├── unlabeled
+│       island_YYYYMMDD_unlabeled.json
+│       island_YYYYMMDD_unlabeled.tif
+│       island_YYYYMMDD_unlabeled.tif.aux.xml
+│       island_YYYYMMDD_unlabeled.tif.ovr
+│       island_YYYYMMDD_unlabeled.xml
+│       island_YYYYMMDD_unlabeled_metadata.json
+│       island_YYYYMMDD_unlabeled_udm2_clip.tif
+│
+└── walrus_shapefiles
+        island_YYYYMMDD_walrus.cpg
+        island_YYYYMMDD_walrus.dbf
+        island_YYYYMMDD_walrus.prj
+        island_YYYYMMDD_walrus.sbn
+        island_YYYYMMDD_walrus.sbx
+        island_YYYYMMDD_walrus.shp
+        island_YYYYMMDD_walrus.shp.xml
+        island_YYYYMMDD_walrus.shx
+
+```
