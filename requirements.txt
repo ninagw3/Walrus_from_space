@@ -1,7 +1,15 @@
+fiona
 geopandas
+imbalanced-learn
+joblib
+jupyter
 matplotlib
 numpy
 pandas
 python
 scikit-learn
+scikit-image
+seaborn
+tensorflow #optional
 rasterio
+xgboost
