@@ -6,7 +6,7 @@ This GitHub is the code used for the Masters of Research Project for the Cambrid
 
 ## Acknowledgements
 
-This project is made in collaboration with the University of Cambridge and the British Antarctic Survey.
+This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.
 
 
 ## Use
@@ -18,7 +18,10 @@ You may want to install the dependencies in a virtual environment of your choice
 pip install -r requirement.txt
 ```
 
-## Where to start?
+## Where to start? / Main files to explore
+
+`1_open_explore_data/1.1_data_analysis` all the files here to understand the data.  
+[data](./1_open_explore_data/image_engancement/image_enhancement.ipynb)
 
 ## Structure
 
@@ -28,6 +31,10 @@ All images used for this study are owned by [Planet](https://www.planet.com/) an
 
 Data should place in a folder called `data`, in the same folder as `notebooks`.
 The data folder structure is explained at the end of the README.md.
+
+
+### Plots
+Some of the save plots from the different notebooks
 
 ### Notebooks
 The notebooks show all the different explorations taken.
@@ -72,55 +79,15 @@ notebooks
 
 Some noteworthy notebooks are:
 `1_open_explore_data/1.1_data_analysis/PCA_Analysis_cluster_labels` which shows some of the PCA of the data.
-![2d Plot of the PCAs for the different classes](E:\PycharmProjects\nina\walrus\plots\pca\pca_2d.png "2d Plot of the PCAs")
+![2d Plot of the PCAs for the different classes](.\plots\pca\pca_2d.png "2d Plot of the PCAs")
 
 
 `3_class_imbalance/class_imbalance_using_spectral.ipynb` shows Welch's t-test, ANOVA, and Kruskal-Wallis H Test for 
 .... and include a table.
+
+Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+
 ```
-Welch's ANOVA for Coast_blue
-                 sum_sq         df           F  PR(>F)
-C(labels)  1.517929e+11        5.0  43400.1523     0.0
-Residual   8.488411e+11  1213490.0         NaN     NaN
-
-Welch's ANOVA for Blue
-                 sum_sq         df             F  PR(>F)
-C(labels)  1.108665e+11        5.0  39227.957861     0.0
-Residual   6.859157e+11  1213490.0           NaN     NaN
-
-Welch's ANOVA for Green1
-                 sum_sq         df             F  PR(>F)
-C(labels)  1.410607e+11        5.0  46444.281349     0.0
-Residual   7.371230e+11  1213490.0           NaN     NaN
-
-Welch's ANOVA for Green
-                 sum_sq         df             F  PR(>F)
-C(labels)  1.736515e+11        5.0  67021.644642     0.0
-Residual   6.288246e+11  1213490.0           NaN     NaN
-
-Welch's ANOVA for Yellow
-                 sum_sq         df              F  PR(>F)
-C(labels)  2.955012e+11        5.0  101620.885017     0.0
-Residual   7.057364e+11  1213490.0            NaN     NaN
-
-Welch's ANOVA for Red
-                 sum_sq         df              F  PR(>F)
-C(labels)  3.030000e+11        5.0  131482.330424     0.0
-Residual   5.592956e+11  1213490.0            NaN     NaN
-
-Welch's ANOVA for Red_edge
-                 sum_sq         df              F  PR(>F)
-C(labels)  3.765338e+11        5.0  174539.066833     0.0
-Residual   5.235733e+11  1213490.0            NaN     NaN
-
-Welch's ANOVA for NIR
-                 sum_sq         df              F  PR(>F)
-C(labels)  4.792210e+11        5.0  265137.763494     0.0
-Residual   4.386625e+11  1213490.0            NaN     NaN
-
-
-          Multiple Comparison of Means - Tukey HSD, FWER=0.05           
-========================================================================
    group1       group2     meandiff  p-adj    lower      upper    reject
 ------------------------------------------------------------------------
   freshwater          ice   681.8746    0.0   672.7801    690.969   True
@@ -142,34 +109,34 @@ walrus_mixed  walrus_pure   271.1093 0.0289      16.69   525.5287   True
 ```
 Kruskal-Wallis H:
 
-| Band         | H-stat             | p-value |
-|--------------|--------------------|---------|
-| Coastal Blue | 396695.54089294106 | 0.0     |
-| Blue         | 382913.7400329306  | 0.0     |
-| Green1       | 401448.69158046786 | 0.0     |
-| Green        | 495364.98787667963 | 0.0     |
-| Yellow       | 603380.0017913427  | 0.0     |
-| Red          | 665949.4517667058  | 0.0     |
-| Red_edge     | 723429.833556239   | 0.0     |
-| Nir          | 794831.4159363415  | 0.0     |
+| Band         |             H-stat | p-value |
+|:-------------|-------------------:|--------:|
+| Coastal Blue | 396695.54089294106 |     0.0 |
+| Blue         |  382913.7400329306 |     0.0 |
+| Green1       | 401448.69158046786 |     0.0 |
+| Green        | 495364.98787667963 |     0.0 |
+| Yellow       |  603380.0017913427 |     0.0 |
+| Red          |  665949.4517667058 |     0.0 |
+| Red_edge     |   723429.833556239 |     0.0 |
+| Nir          |  794831.4159363415 |     0.0 |
 
 
 
 Manova:
 
-| Intercept              | Value  | Num DF | Den DF       | F Value    | Pr > F |
-|------------------------|--------|--------|--------------|------------|--------|
+| Intercept              |  Value | Num DF |       Den DF |    F Value | Pr > F |
+|:-----------------------|-------:|-------:|-------------:|-----------:|-------:|
 | Wilks' lambda          | 0.7049 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
 | Pillai's trace         | 0.2951 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
 | Hotelling-Lawley trace | 0.4186 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
 | Roy's greatest root    | 0.4186 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
 
-| C(encoded_labels       | Value  | Num DF  | Den DF       | F Value     | Pr > F |
-|------------------------|--------|---------|--------------|-------------|--------|
-| Wilks' lambda          | 0.1357 | 40.0000 | 5289452.5612 | 76870.6043  | 0.0000 |
-| Pillai's trace         | 1.1144 | 40.0000 | 6067435.0000 | 43504.4206  | 0.0000 |
+| C(encoded_labels       |  Value |  Num DF |       Den DF |     F Value | Pr > F |
+|:-----------------------|-------:|--------:|-------------:|------------:|-------:|
+| Wilks' lambda          | 0.1357 | 40.0000 | 5289452.5612 |  76870.6043 | 0.0000 |
+| Pillai's trace         | 1.1144 | 40.0000 | 6067435.0000 |  43504.4206 | 0.0000 |
 | Hotelling-Lawley trace | 4.5905 | 40.0000 | 3640435.0001 | 139263.2151 | 0.0000 |
-| Roy's greatest root    | 4.1838 | 8.0000  | 1213487.0000 | 634626.7833 | 0.0000 |
+| Roy's greatest root    | 4.1838 |  8.0000 | 1213487.0000 | 634626.7833 | 0.0000 |
 
 
 
@@ -178,8 +145,6 @@ Manova:
 
 ## Results
 
-### Plots
-Some of the save plots from the different notebooks
 
 
 ## License
