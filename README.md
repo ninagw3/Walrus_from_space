@@ -19,13 +19,13 @@ This project also used data owned by [Planet](https://www.planet.com/).
 To install the dependencies in a virtual environment of your choice.
 
 ```shell
-pip install -r requirement.tx
+pip install 'name of dependency'
 ```
 
 To install the dependencies within a Jupyter notebook 
 
 ```shell
-!pip install -r requirement.txt
+!pip install 'name of dependency'
 ```
 
 
@@ -184,10 +184,10 @@ Manova:
 
 
 ## Data Folder Structure
-The structure of `data/train` is expected to be:
+The structure of `data/train` used throughout this code was as follows, where 'island' is the name of the island in the image, 'YYYYMMDD' is the date in year month day format of when the image was taken.
 
 ```
-train
+Folder_name
 │
 ├── clipped_groundtruth
 │       island_YYYYMMDD_groundtruth.tfw
