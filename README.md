@@ -1,7 +1,7 @@
 # Walrus_from_space
-This GitHub is the code used for the Masters of Research Project for the Cambridge AI4ER, titled:
+This GitHub is the code used for the Masters of Research Project, titled:
 
-### **Walrus from space, using satellite images to monitor walrus haul-ours across Svalbard.**
+### **Walrus From Space: Monitoring Walrus Haul-out Sites with Satellite Imagery**
 
 ---
 
@@ -11,18 +11,15 @@ This GitHub is the code used for the Masters of Research Project for the Cambrid
 This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.  
 This project also used data owned by [Planet](https://www.planet.com/).
 
-include logos?
-
 ## Use
 ### Installing dependencies
 
-You may want to install the dependencies in a virtual environment of your choice.
+To install the dependencies in a virtual environment of your choice.
 
 ```shell
 pip install -r requirement.txt
 ```
-
-
+---
 
 ## Where to start? / Main files to explore
 
@@ -185,12 +182,11 @@ In other words _**ONLY**_ the code is covered by the LICENSE, the rest is not.
 
 
 ## Data Folder Structure
-The structure of `data/train` is expected to be:
+The structure of `data/train` used throughout this code was as follows, where 'island' is the name of the island in the
+image, 'YYYYMMDD' is the date in year month day format of when the image was taken.
 
 ```
-train
-│   island_gis.aprx
-│   island_gis.atbx
+Folder_name
 │
 ├── clipped_groundtruth
 │       island_YYYYMMDD_groundtruth.tfw
@@ -214,28 +210,9 @@ train
 │       island_YYYYMMDD_train.shx
 │
 ├── clipped_unlabeled
-│   │   island_YYYYMMDD_image.tfw
-│   │   island_YYYYMMDD_image.tif
-│   │   island_YYYYMMDD_image.tif.aux.xml
-│   │
-│   └── walrus_shapefiles
-│           island_YYYYMMDD_walrus.cpg
-│           island_YYYYMMDD_walrus.dbf
-│           island_YYYYMMDD_walrus.prj
-│           island_YYYYMMDD_walrus.sbn
-│           island_YYYYMMDD_walrus.sbx
-│           island_YYYYMMDD_walrus.shp
-│           island_YYYYMMDD_walrus.shp.xml
-│           island_YYYYMMDD_walrus.shx
-│
-├── images
-│       island_YYYYMMDD_image.json
+│       island_YYYYMMDD_image.tfw
 │       island_YYYYMMDD_image.tif
 │       island_YYYYMMDD_image.tif.aux.xml
-│       island_YYYYMMDD_image.tif.ovr
-│       island_YYYYMMDD_image.xml
-│       island_YYYYMMDD_image_metadata.json
-│       island_YYYYMMDD_image.json
 │
 ├── island_by_island
 │   ├── island_1_groundtruth
@@ -263,51 +240,6 @@ train
 │           island_YYYYMMDD_image.tfw
 │           island_YYYYMMDD_image.tif
 │           island_YYYYMMDD_image.tif.aux.xml
-│
-├── mess_about_folder
-│   │   island_YYYYMMDD_image.clip.tif
-│   │
-│   ├── groundtruth
-│   │       island_YYYYMMDD_groundtruth.tfw
-│   │       island_YYYYMMDD_groundtruth.tif
-│   │       island_YYYYMMDD_groundtruth.tif.aux.xml
-│   │       island_YYYYMMDD_groundtruth.tif.ovr
-│   │
-│   ├── images_1
-│   │       island_YYYYMMDD_image.json
-│   │       island_YYYYMMDD_image.tif
-│   │       island_YYYYMMDD_image.tif.aux.xml
-│   │       island_YYYYMMDD_image.tif.ovr
-│   │       island_YYYYMMDD_image.xml
-│   │       island_YYYYMMDD_image_metadata.json
-│   │       island_YYYYMMDD_image_udm2_clip.tif
-│   │
-│   └── shapefiles_1
-│           island_YYYYMMDD_train.cpg
-│           island_YYYYMMDD_train.dbf
-│           island_YYYYMMDD_train.prj
-│           island_YYYYMMDD_train.shp
-│           island_YYYYMMDD_train.shp.xml
-│           island_YYYYMMDD_train.shx
-│
-├── shapefile
-│       island_YYYYMMDD_train.cpg
-│       island_YYYYMMDD_train.dbf
-│       island_YYYYMMDD_train.prj
-│       island_YYYYMMDD_train.sbn
-│       island_YYYYMMDD_train.sbx
-│       island_YYYYMMDD_train.shp
-│       island_YYYYMMDD_train.shp.xml
-│       island_YYYYMMDD_train.shx
-│
-├── unlabeled
-│       island_YYYYMMDD_unlabeled.json
-│       island_YYYYMMDD_unlabeled.tif
-│       island_YYYYMMDD_unlabeled.tif.aux.xml
-│       island_YYYYMMDD_unlabeled.tif.ovr
-│       island_YYYYMMDD_unlabeled.xml
-│       island_YYYYMMDD_unlabeled_metadata.json
-│       island_YYYYMMDD_unlabeled_udm2_clip.tif
 │
 └── walrus_shapefiles
         island_YYYYMMDD_walrus.cpg
