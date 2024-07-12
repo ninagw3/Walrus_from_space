@@ -106,10 +106,11 @@ notebooks
 
 
 ## Results
+### PCA
 `1_open_explore_data/1.1_data_analysis/PCA_Analysis_cluster_labels` which shows some of the PCA of the data.
 ![2d Plot of the PCAs for the different classes](./plots/pca/pca_2d.png "2d Plot of the PCAs")
 
-
+### Class imbalance stats
 `3_class_imbalance/class_imbalance_using_spectral.ipynb` shows Welch's t-test, ANOVA, and Kruskal-Wallis H Test
 
 Multiple Comparison of Means - Tukey HSD, FWER=0.05           
@@ -147,8 +148,6 @@ Kruskal-Wallis H:
 | Red_edge     |   723429.833556239 |     0.0 |
 | Nir          |  794831.4159363415 |     0.0 |
 
-
-
 Manova:
 
 | Intercept              |  Value | Num DF |       Den DF |    F Value | Pr > F |
@@ -164,13 +163,6 @@ Manova:
 | Pillai's trace         | 1.1144 | 40.0000 | 6067435.0000 |  43504.4206 | 0.0000 |
 | Hotelling-Lawley trace | 4.5905 | 40.0000 | 3640435.0001 | 139263.2151 | 0.0000 |
 | Roy's greatest root    | 4.1838 |  8.0000 | 1213487.0000 | 634626.7833 | 0.0000 |
-
-
-
-`4_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb` Tomek  Links under-sampling
-
-
-
 
 
 
