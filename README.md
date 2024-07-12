@@ -1,12 +1,15 @@
 # Walrus_from_space
 This GitHub is the code used for the Masters of Research Project for the Cambridge AI4ER, titled:
 
-**Walrus from space, using satellite images to monitor walrus haul-ours across Svalbard.**
+### **Walrus from space, using satellite images to monitor walrus haul-ours across Svalbard.**
+
+---
 
 
 ## Acknowledgements
 
-This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.
+This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.  
+This project also used data owned by [Planet](https://www.planet.com/).
 
 
 ## Use
@@ -18,10 +21,31 @@ You may want to install the dependencies in a virtual environment of your choice
 pip install -r requirement.txt
 ```
 
+
+
 ## Where to start? / Main files to explore
 
-`1_open_explore_data/1.1_data_analysis` all the files here to understand the data.  
-[data](./1_open_explore_data/image_engancement/image_enhancement.ipynb)
+[`1_open_explore_data/1.1_data_analysis`](./notebooks/1_open_explore_data/1.1_data_analysis) all the files here to understand the data.  
+[`1_open_explore_data/1.2_image_enhancement/image_enhancement.ipynb`](./notebooks/1_open_explore_data/1.2_image_enhancement/image_enhancement.ipynb)
+to explore the different image manipulation.
+
+[`2_spectral_profiles/spectral_analysis`](./notebooks/2_spectral_profiles/spectral_analysis.ipynb) for all the spectral 
+and understanding the preprocessing steps for the creation of the training data.  
+[`2_spectral_profiles/image_enhance_spectral_differences.ipynb`](./notebooks/2_spectral_profiles/image_enhance_spectral_differences.ipynb) 
+for the analysis and comparison between the different classes in spectral profiles.
+
+[`3_class_imbalance/class_imbalance_using_spectral`](./notebooks/3_class_imbalance/class_imbalance_using_spectral.ipynb)
+That shows the class imbalance and results for Welch's t-test, ANOVA, and Kruskal-Wallis H Test.
+[`3_class_imbalance/adaptive_smote_test`](./notebooks/3_class_imbalance/adaptive_smote_test.ipynb) for exploration of SMOTE.
+[`3_class_imbalance/class_imbalance_ADASYN_allislands`](./notebooks/3_class_imbalance/class_imbalance_ADASYN_allislands.ipynb) 
+for ADASYN.
+
+[`4_random_forest`](./notebooks/4_random_forest) Different implementation of Random Forest.
+
+[`9_compare_model/`](./notebooks/9_compare_model) Notebooks that compares the models.
+[`9_compare_model/oceanbuffer`](./notebooks/9_compare_model/oceanbuffer.ipynb) to show the use of a multipass, 
+first masking the ocean, thus detecting the coast to focus on to find walruses.
+
 
 ## Structure
 
@@ -29,7 +53,10 @@ pip install -r requirement.txt
 All images used for this study are owned by [Planet](https://www.planet.com/) and therefore can not be made public.
 
 
-Data should place in a folder called `data`, in the same folder as `notebooks`.
+Data should place in a folder called `data`, in the same folder as `notebooks`.  
+To run the notebooks yourself, you might to overwrite the paths for the data dir at the beginning of the notebook with
+your own.
+
 The data folder structure is explained at the end of the README.md.
 
 
@@ -77,9 +104,9 @@ notebooks
         Multiple notebooks to compare all the different models.
 ```
 
-Some noteworthy notebooks are:
+#### Some noteworthy notebooks are:
 `1_open_explore_data/1.1_data_analysis/PCA_Analysis_cluster_labels` which shows some of the PCA of the data.
-![2d Plot of the PCAs for the different classes](.\plots\pca\pca_2d.png "2d Plot of the PCAs")
+![2d Plot of the PCAs for the different classes](./plots/pca/pca_2d.png "2d Plot of the PCAs")
 
 
 `3_class_imbalance/class_imbalance_using_spectral.ipynb` shows Welch's t-test, ANOVA, and Kruskal-Wallis H Test for 
