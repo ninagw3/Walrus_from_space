@@ -184,20 +184,20 @@ Manova:
 
 ### Random Forest
 
-![rf_pred](.\plots\models\rf_pred.png)
-![rf_sat](.\plots\models\rf_sat.png)  
+![rf_pred](./plots/models/rf_pred.png)
+![rf_sat](./plots/models/rf_sat.png)  
 
-![rf_pred2](.\plots\models\rf_pred2.png)
-![rf_sat2](.\plots\models\rf_sat2.png)
+![rf_pred2](./plots/models/rf_pred2.png)
+![rf_sat2](./plots/models/rf_sat2.png)
 
 ### Ensemble Model
 
-![en_pred2](.\plots\models\en_pred1.png)
-![en_sat2](.\plots\models\en_sat1.png)  
-![en_pred2](.\plots\models\en_pred2.png)
-![en_sat2](.\plots\models\en_sat2.png)  
-![en_pred2](.\plots\models\en_pred3.png)
-![en_sat2](.\plots\models\en_sat3.png)  
+![en_pred2](./plots/models/en_pred1.png)
+![en_sat2](./plots/models/en_sat1.png)  
+![en_pred2](./plots/models/en_pred2.png)
+![en_sat2](./plots/models/en_sat2.png)  
+![en_pred2](./plots/models/en_pred3.png)
+![en_sat2](./plots/models/en_sat3.png)  
 
 
 ## License
