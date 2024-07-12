@@ -1,7 +1,7 @@
 # Walrus_from_space
-This GitHub is the code used for the Masters of Research Project, titled:
+This GitHub is the code used for the Masters of Research Project for the Cambridge AI4ER, titled:
 
-### **Walrus From Space: Monitoring Walrus Haul-out Sites with Satellite Imagery.**
+### **Walrus from space, using satellite images to monitor walrus haul-ours across Svalbard.**
 
 ---
 
@@ -11,22 +11,17 @@ This GitHub is the code used for the Masters of Research Project, titled:
 This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.  
 This project also used data owned by [Planet](https://www.planet.com/).
 
-
+include logos?
 
 ## Use
 ### Installing dependencies
 
-To install the dependencies in a virtual environment of your choice.
+You may want to install the dependencies in a virtual environment of your choice.
 
 ```shell
-pip install 'name of dependency'
+pip install -r requirement.txt
 ```
 
-To install the dependencies within a Jupyter notebook 
-
-```shell
-!pip install 'name of dependency'
-```
 
 
 ## Where to start? / Main files to explore
@@ -47,6 +42,8 @@ That shows the class imbalance and results for Welch's t-test, ANOVA, and Kruska
 for ADASYN.
 
 [`4_random_forest`](./notebooks/4_random_forest) Different implementation of Random Forest.  
+[`4_random_forest/smart_RF_clipped_up_down_samp_allislands`](./notebooks/4_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb) 
+shows Tomek Links under-sampling being used.
 
 [`9_compare_model/`](./notebooks/9_compare_model) Notebooks that compares the models.  
 [`9_compare_model/oceanbuffer`](./notebooks/9_compare_model/oceanbuffer.ipynb) to show the use of a multipass, 
@@ -110,13 +107,13 @@ notebooks
         Multiple notebooks to compare all the different models.
 ```
 
-#### Some noteworthy notebooks are:
+
+## Results
 `1_open_explore_data/1.1_data_analysis/PCA_Analysis_cluster_labels` which shows some of the PCA of the data.
 ![2d Plot of the PCAs for the different classes](./plots/pca/pca_2d.png "2d Plot of the PCAs")
 
 
-`3_class_imbalance/class_imbalance_using_spectral.ipynb` shows Welch's t-test, ANOVA, and Kruskal-Wallis H Test for 
-.... and include a table.
+`3_class_imbalance/class_imbalance_using_spectral.ipynb` shows Welch's t-test, ANOVA, and Kruskal-Wallis H Test
 
 Multiple Comparison of Means - Tukey HSD, FWER=0.05           
 
@@ -176,18 +173,23 @@ Manova:
 `4_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb` Tomek  Links under-sampling
 
 
-## Results
+
 
 
 
 ## License
 
+The LICENSE ONLY covers the notebooks.
+All and any satellite images that are present in any of the notebooks or the folder plots are not part of that LICENSE.
+
 
 ## Data Folder Structure
-The structure of `data/train` used throughout this code was as follows, where 'island' is the name of the island in the image, 'YYYYMMDD' is the date in year month day format of when the image was taken.
+The structure of `data/train` is expected to be:
 
 ```
-Folder_name
+train
+│   island_gis.aprx
+│   island_gis.atbx
 │
 ├── clipped_groundtruth
 │       island_YYYYMMDD_groundtruth.tfw
@@ -211,11 +213,28 @@ Folder_name
 │       island_YYYYMMDD_train.shx
 │
 ├── clipped_unlabeled
-│       island_YYYYMMDD_image.tfw
+│   │   island_YYYYMMDD_image.tfw
+│   │   island_YYYYMMDD_image.tif
+│   │   island_YYYYMMDD_image.tif.aux.xml
+│   │
+│   └── walrus_shapefiles
+│           island_YYYYMMDD_walrus.cpg
+│           island_YYYYMMDD_walrus.dbf
+│           island_YYYYMMDD_walrus.prj
+│           island_YYYYMMDD_walrus.sbn
+│           island_YYYYMMDD_walrus.sbx
+│           island_YYYYMMDD_walrus.shp
+│           island_YYYYMMDD_walrus.shp.xml
+│           island_YYYYMMDD_walrus.shx
+│
+├── images
+│       island_YYYYMMDD_image.json
 │       island_YYYYMMDD_image.tif
 │       island_YYYYMMDD_image.tif.aux.xml
-|
-│
+│       island_YYYYMMDD_image.tif.ovr
+│       island_YYYYMMDD_image.xml
+│       island_YYYYMMDD_image_metadata.json
+│       island_YYYYMMDD_image.json
 │
 ├── island_by_island
 │   ├── island_1_groundtruth
@@ -243,6 +262,51 @@ Folder_name
 │           island_YYYYMMDD_image.tfw
 │           island_YYYYMMDD_image.tif
 │           island_YYYYMMDD_image.tif.aux.xml
+│
+├── mess_about_folder
+│   │   island_YYYYMMDD_image.clip.tif
+│   │
+│   ├── groundtruth
+│   │       island_YYYYMMDD_groundtruth.tfw
+│   │       island_YYYYMMDD_groundtruth.tif
+│   │       island_YYYYMMDD_groundtruth.tif.aux.xml
+│   │       island_YYYYMMDD_groundtruth.tif.ovr
+│   │
+│   ├── images_1
+│   │       island_YYYYMMDD_image.json
+│   │       island_YYYYMMDD_image.tif
+│   │       island_YYYYMMDD_image.tif.aux.xml
+│   │       island_YYYYMMDD_image.tif.ovr
+│   │       island_YYYYMMDD_image.xml
+│   │       island_YYYYMMDD_image_metadata.json
+│   │       island_YYYYMMDD_image_udm2_clip.tif
+│   │
+│   └── shapefiles_1
+│           island_YYYYMMDD_train.cpg
+│           island_YYYYMMDD_train.dbf
+│           island_YYYYMMDD_train.prj
+│           island_YYYYMMDD_train.shp
+│           island_YYYYMMDD_train.shp.xml
+│           island_YYYYMMDD_train.shx
+│
+├── shapefile
+│       island_YYYYMMDD_train.cpg
+│       island_YYYYMMDD_train.dbf
+│       island_YYYYMMDD_train.prj
+│       island_YYYYMMDD_train.sbn
+│       island_YYYYMMDD_train.sbx
+│       island_YYYYMMDD_train.shp
+│       island_YYYYMMDD_train.shp.xml
+│       island_YYYYMMDD_train.shx
+│
+├── unlabeled
+│       island_YYYYMMDD_unlabeled.json
+│       island_YYYYMMDD_unlabeled.tif
+│       island_YYYYMMDD_unlabeled.tif.aux.xml
+│       island_YYYYMMDD_unlabeled.tif.ovr
+│       island_YYYYMMDD_unlabeled.xml
+│       island_YYYYMMDD_unlabeled_metadata.json
+│       island_YYYYMMDD_unlabeled_udm2_clip.tif
 │
 └── walrus_shapefiles
         island_YYYYMMDD_walrus.cpg
