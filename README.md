@@ -1,4 +1,8 @@
 # Walrus_from_space
+
+![Static Badge](https://img.shields.io/badge/python-blue?logo=python&logoColor=yellow)
+![GitHub](https://img.shields.io/github/license/ninagw3/Walrus_from_space?color=green)
+
 This GitHub is the code used for the Masters of Research Project, titled:
 
 ### **Walrus From Space: Monitoring Walrus Haul-out Sites with Satellite Imagery**
@@ -10,6 +14,8 @@ This GitHub is the code used for the Masters of Research Project, titled:
 
 This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.  
 This project also used data owned by [Planet](https://www.planet.com/).
+
+---
 
 ## Use
 ### Installing dependencies
