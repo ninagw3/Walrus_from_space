@@ -135,7 +135,8 @@ notebooks
 │       Some tries with KNNs, with undersampling and parameter tuning.
 │
 ├── 9_random_forest
-│       Mutliple runs of Random Forest, form different preprocessing to location, with undersampling and parameter tuning.
+│       Mutliple runs of Random Forest, form different preprocessing to location, 
+│       with undersampling and parameter tuning.
 │
 ├── 10_xgboost
 │       A notebook for the implementation with XGBoost, with undersampling and parameter tuning.
@@ -212,7 +213,7 @@ Manova:
 | Hotelling-Lawley trace | 0.4186 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
 | Roy's greatest root    | 0.4186 | 8.0000 | 1213483.0000 | 63489.4851 | 0.0000 |
 
-| C(encoded_labels       |  Value |  Num DF |       Den DF |     F Value | Pr > F |
+| C(encoded_labels)      |  Value |  Num DF |       Den DF |     F Value | Pr > F |
 |:-----------------------|-------:|--------:|-------------:|------------:|-------:|
 | Wilks' lambda          | 0.1357 | 40.0000 | 5289452.5612 |  76870.6043 | 0.0000 |
 | Pillai's trace         | 1.1144 | 40.0000 | 6067435.0000 |  43504.4206 | 0.0000 |
