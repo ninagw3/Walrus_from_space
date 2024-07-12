@@ -71,12 +71,12 @@ That shows the class imbalance and results for **Welch's t-test**, **ANOVA**, an
 [`3_class_imbalance/class_imbalance_ADASYN_allislands`](./notebooks/3_class_imbalance/class_imbalance_ADASYN_allislands.ipynb) 
 for **ADASYN**.
 
-[`4_random_forest`](./notebooks/4_random_forest) Different implementation of Random Forest.  
-[`4_random_forest/smart_RF_clipped_up_down_samp_allislands`](./notebooks/4_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb) 
+[`4_random_forest`](./notebooks/9_random_forest) Different implementation of Random Forest.  
+[`4_random_forest/smart_RF_clipped_up_down_samp_allislands`](notebooks/9_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb) 
 shows Tomek Links under-sampling being used.
 
-[`9_compare_model/`](./notebooks/9_compare_model) Notebooks that compares the models.  
-[`9_compare_model/oceanbuffer`](./notebooks/9_compare_model/oceanbuffer.ipynb) to show the use of a multipass, 
+[`9_compare_model/`](./notebooks/4_model_compare) Notebooks that compares the models.  
+[`9_compare_model/oceanbuffer`](notebooks/4_model_compare/oceanbuffer.ipynb) to show the use of a multipass, 
 first masking the ocean, thus detecting the coast to focus on to find walruses.  
 
 
@@ -118,23 +118,32 @@ notebooks
 ├── 3_class_imbalance
 │       Explores different way to the class imbalance present, using methods like SMOTE and ADASYN.
 │
-├── 4_random_forest
-│       Mutliple runs of Random Forest, form different preprocessing to location.
+├── 4_model_compare
+│       Multiple notebooks to compare all the different models.
 │
-├── 5_knn
-│       Some tries with KNNs.
+├── 5_detection_change
+│       Tests with detection changes in images.
 │
-├── 6_xgboost
-│       A notebook for the implementation with XGBoost
+├── 6_object_based
+│       A notebook for object-based detection.
 │
-├── 7_ensemble
-│       An essemble model, and using some ocean buffer
+├── 7_clustering
+│       A notebook to try unsupervised clustering.
 │
-├── 8_cnn
+├── 8_knn
+│       Some tries with KNNs, with undersampling and parameter tuning.
+│
+├── 9_random_forest
+│       Mutliple runs of Random Forest, form different preprocessing to location, with undersampling and parameter tuning.
+│
+├── 10_xgboost
+│       A notebook for the implementation with XGBoost, with undersampling and parameter tuning.
+│
+├── 11_cnn
 │       Some try at CNNs and UNET
 │
-└── 9_compare_model
-        Multiple notebooks to compare all the different models.
+└── 12_stacked_ensemble_model
+        Multiple notebooks for stacked and essemble model, with the use of an ocean buffer.
 ```
 
 
