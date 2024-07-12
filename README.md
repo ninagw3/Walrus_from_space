@@ -9,11 +9,38 @@ This GitHub is the code used for the Masters of Research Project, titled:
 
 ---
 
+<!-- TOC -->
+* [Walrus_from_space](#walrus_from_space)
+  * [Acknowledgements](#acknowledgements)
+  * [License](#license)
+  * [Use](#use)
+    * [Installing dependencies](#installing-dependencies)
+  * [Where to start? / Main files to explore](#where-to-start--main-files-to-explore)
+  * [Structure](#structure)
+    * [Data](#data)
+    * [Plots](#plots)
+    * [Notebooks](#notebooks)
+  * [Results](#results)
+    * [PCA](#pca)
+    * [Class imbalance stats](#class-imbalance-stats)
+    * [Model Comparison](#model-comparison)
+    * [Random Forest](#random-forest)
+    * [Ensemble Model](#ensemble-model)
+  * [Data Folder Structure](#data-folder-structure)
+<!-- TOC -->
+
+---
 
 ## Acknowledgements
 
 This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.  
 This project also used data owned by [Planet](https://www.planet.com/).
+
+## License
+
+The LICENSE _**ONLY**_ covers the notebooks.
+All and any satellite images that are present in any of the notebooks or the folder plots are not part of that LICENSE.
+In other words _**ONLY**_ the code is covered by the LICENSE, the rest is not.
 
 ---
 
@@ -198,13 +225,6 @@ Manova:
 ![en_sat2](./plots/models/en_sat2.png)  
 ![en_pred2](./plots/models/en_pred3.png)
 ![en_sat2](./plots/models/en_sat3.png)  
-
-
-## License
-
-The LICENSE _**ONLY**_ covers the notebooks.
-All and any satellite images that are present in any of the notebooks or the folder plots are not part of that LICENSE.
-In other words _**ONLY**_ the code is covered by the LICENSE, the rest is not.
 
 
 ## Data Folder Structure
