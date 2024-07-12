@@ -63,13 +63,13 @@ to explore the different image manipulation.
 [`2_spectral_profiles/spectral_analysis`](./notebooks/2_spectral_profiles/spectral_analysis.ipynb) for all the spectral 
 and understanding the preprocessing steps for the creation of the training data.  
 [`2_spectral_profiles/image_enhance_spectral_differences.ipynb`](./notebooks/2_spectral_profiles/image_enhance_spectral_differences.ipynb) 
-for the analysis and comparison between the different classes in spectral profiles.
+for the analysis and comparison between the different classes in spectral profiles, and shows **Fisher's discriminant**. 
 
 [`3_class_imbalance/class_imbalance_using_spectral`](./notebooks/3_class_imbalance/class_imbalance_using_spectral.ipynb)
-That shows the class imbalance and results for Welch's t-test, ANOVA, and Kruskal-Wallis H Test.  
-[`3_class_imbalance/adaptive_smote_test`](./notebooks/3_class_imbalance/adaptive_smote_test.ipynb) for exploration of SMOTE.  
+That shows the class imbalance and results for **Welch's t-test**, **ANOVA**, and **Kruskal-Wallis H Test**.  
+[`3_class_imbalance/adaptive_smote_test`](./notebooks/3_class_imbalance/adaptive_smote_test.ipynb) for exploration of **SMOTE.**  
 [`3_class_imbalance/class_imbalance_ADASYN_allislands`](./notebooks/3_class_imbalance/class_imbalance_ADASYN_allislands.ipynb) 
-for ADASYN.
+for **ADASYN**.
 
 [`4_random_forest`](./notebooks/4_random_forest) Different implementation of Random Forest.  
 [`4_random_forest/smart_RF_clipped_up_down_samp_allislands`](./notebooks/4_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb) 
@@ -142,6 +142,12 @@ notebooks
 ### PCA
 `1_open_explore_data/1.1_data_analysis/PCA_Analysis_cluster_labels` which shows some of the PCA of the data.
 ![2d Plot of the PCAs for the different classes](./plots/pca/pca_2d.png "2d Plot of the PCAs")
+
+### Spectral profile and distances
+from `2_spectral_profiles/spectral_analysis`, some spectral information.
+
+![Euclidean distance between spectrum across all island](./plots/spectral/euc_dist_all_island.png "Euclidean distance between spectrum across all island")
+![Jeffries-Matusita distance between spectrum across all island](./plots/spectral/JM_dist_all_island.png "Jeffries-Matusita distance between spectrum across all island")
 
 ### Class imbalance stats
 `3_class_imbalance/class_imbalance_using_spectral.ipynb`
