@@ -179,8 +179,9 @@ Manova:
 
 ## License
 
-The LICENSE ONLY covers the notebooks.
+The LICENSE _**ONLY**_ covers the notebooks.
 All and any satellite images that are present in any of the notebooks or the folder plots are not part of that LICENSE.
+In other words _**ONLY**_ the code is covered by the LICENSE, the rest is not.
 
 
 ## Data Folder Structure
