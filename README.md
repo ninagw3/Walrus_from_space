@@ -141,13 +141,19 @@ notebooks
 ## Results
 ### PCA
 `1_open_explore_data/1.1_data_analysis/PCA_Analysis_cluster_labels` which shows some of the PCA of the data.
-![2d Plot of the PCAs for the different classes](./plots/pca/pca_2d.png "2d Plot of the PCAs")
+![2d Plot of the PCAs for the different classes](./plots/pca/pca_2d.png "2d Plot of the PCAs.")
 
 ### Spectral profile and distances
-from `2_spectral_profiles/spectral_analysis`, some spectral information.
+from `2_spectral_profiles/spectral_analysis`, some spectral information.  
 
-![Euclidean distance between spectrum across all island](./plots/spectral/euc_dist_all_island.png "Euclidean distance between spectrum across all island")
-![Jeffries-Matusita distance between spectrum across all island](./plots/spectral/JM_dist_all_island.png "Jeffries-Matusita distance between spectrum across all island")
+Spectral plot across all islands   
+![Spectral plot across all islands](./plots/spectral/spectral_profile.png)
+
+Euclidean distance between spectrum across all islands  
+![Euclidean distance between spectrum across all islands](./plots/spectral/euc_dist_all_island.png "Euclidean distance between spectrum across all islands.")
+
+Jeffries-Matusita distance between spectrum across all islands  
+![Jeffries-Matusita distance between spectrum across all islands](./plots/spectral/JM_dist_all_island.png "Jeffries-Matusita distance between spectrum across all islands.")
 
 ### Class imbalance stats
 `3_class_imbalance/class_imbalance_using_spectral.ipynb`
