@@ -71,12 +71,13 @@ That shows the class imbalance and results for **Welch's t-test**, **ANOVA**, an
 [`3_class_imbalance/class_imbalance_ADASYN_allislands`](./notebooks/3_class_imbalance/class_imbalance_ADASYN_allislands.ipynb) 
 for **ADASYN**.
 
-[`4_random_forest`](./notebooks/9_random_forest) Different implementation of Random Forest.  
-[`4_random_forest/smart_RF_clipped_up_down_samp_allislands`](notebooks/9_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb) 
+[`4_model_compare/`](./notebooks/4_model_compare) Notebooks that compares the models. 
+
+[`9_random_forest`](./notebooks/9_random_forest) Different implementation of Random Forest.  
+[`9_random_forest/smart_RF_clipped_up_down_samp_allislands`](notebooks/9_random_forest/smart_RF_clipped_up_down_samp_allislands.ipynb)
 shows Tomek Links under-sampling being used.
 
-[`9_compare_model/`](./notebooks/4_model_compare) Notebooks that compares the models.  
-[`9_compare_model/oceanbuffer`](notebooks/4_model_compare/oceanbuffer.ipynb) to show the use of a multipass, 
+[`12_stack_ensemble_model/oceanbuffer`](./notebooks/12_stacked_ensemble_model/oceanbuffer.ipynb) to show the use of a multipass, 
 first masking the ocean, thus detecting the coast to focus on to find walruses.  
 
 
