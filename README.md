@@ -11,6 +11,7 @@ This GitHub is the code used for the Masters of Research Project for the Cambrid
 This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.  
 This project also used data owned by [Planet](https://www.planet.com/).
 
+include logos?
 
 ## Use
 ### Installing dependencies
@@ -27,7 +28,7 @@ pip install -r requirement.txt
 
 [`1_open_explore_data/1.1_data_analysis`](./notebooks/1_open_explore_data/1.1_data_analysis) all the files here to understand the data.  
 [`1_open_explore_data/1.2_image_enhancement/image_enhancement.ipynb`](./notebooks/1_open_explore_data/1.2_image_enhancement/image_enhancement.ipynb)
-to explore the different image manipulation.
+to explore the different image manipulation.  
 
 [`2_spectral_profiles/spectral_analysis`](./notebooks/2_spectral_profiles/spectral_analysis.ipynb) for all the spectral 
 and understanding the preprocessing steps for the creation of the training data.  
@@ -35,16 +36,16 @@ and understanding the preprocessing steps for the creation of the training data.
 for the analysis and comparison between the different classes in spectral profiles.
 
 [`3_class_imbalance/class_imbalance_using_spectral`](./notebooks/3_class_imbalance/class_imbalance_using_spectral.ipynb)
-That shows the class imbalance and results for Welch's t-test, ANOVA, and Kruskal-Wallis H Test.
-[`3_class_imbalance/adaptive_smote_test`](./notebooks/3_class_imbalance/adaptive_smote_test.ipynb) for exploration of SMOTE.
+That shows the class imbalance and results for Welch's t-test, ANOVA, and Kruskal-Wallis H Test.  
+[`3_class_imbalance/adaptive_smote_test`](./notebooks/3_class_imbalance/adaptive_smote_test.ipynb) for exploration of SMOTE.  
 [`3_class_imbalance/class_imbalance_ADASYN_allislands`](./notebooks/3_class_imbalance/class_imbalance_ADASYN_allislands.ipynb) 
 for ADASYN.
 
-[`4_random_forest`](./notebooks/4_random_forest) Different implementation of Random Forest.
+[`4_random_forest`](./notebooks/4_random_forest) Different implementation of Random Forest.  
 
-[`9_compare_model/`](./notebooks/9_compare_model) Notebooks that compares the models.
+[`9_compare_model/`](./notebooks/9_compare_model) Notebooks that compares the models.  
 [`9_compare_model/oceanbuffer`](./notebooks/9_compare_model/oceanbuffer.ipynb) to show the use of a multipass, 
-first masking the ocean, thus detecting the coast to focus on to find walruses.
+first masking the ocean, thus detecting the coast to focus on to find walruses.  
 
 
 ## Structure
