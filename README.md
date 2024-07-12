@@ -11,7 +11,7 @@ This GitHub is the code used for the Masters of Research Project for the Cambrid
 This project is made in collaboration with the `University of Cambridge` and the `British Antarctic Survey`.  
 This project also used data owned by [Planet](https://www.planet.com/).
 
-include logos?
+
 
 ## Use
 ### Installing dependencies
