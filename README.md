@@ -117,7 +117,7 @@ notebooks
 ![2d Plot of the PCAs for the different classes](./plots/pca/pca_2d.png "2d Plot of the PCAs")
 
 ### Class imbalance stats
-`3_class_imbalance/class_imbalance_using_spectral.ipynb` shows Welch's t-test, ANOVA, and Kruskal-Wallis H Test
+`3_class_imbalance/class_imbalance_using_spectral.ipynb`
 
 Multiple Comparison of Means - Tukey HSD, FWER=0.05           
 
@@ -170,6 +170,34 @@ Manova:
 | Hotelling-Lawley trace | 4.5905 | 40.0000 | 3640435.0001 | 139263.2151 | 0.0000 |
 | Roy's greatest root    | 4.1838 |  8.0000 | 1213487.0000 | 634626.7833 | 0.0000 |
 
+### Model Comparison
+
+| Classifier          | Accuracy | Precision | Recall |    F1! |
+|:--------------------|---------:|----------:|-------:|-------:|
+| k-NN                |   0.9844 |    0.9841 | 0.9843 | 0.9841 |
+| RF                  |   0.9839 |    0.9836 | 0.9839 | 0.9836 |
+| XGBoost             |   0.9814 |    0.9811 | 0.9814 | 0.9811 |
+| Gradient Boosting   |   0.9707 |    0.9695 | 0.9707 | 0.9696 |
+| Logistic Regression |   0.9269 |    0.9166 | 0.9269 | 0.9147 |
+| SVM                 |   0.9583 |    0.9515 | 0.9531 | 0.9462 |
+| Object-detection    |   0.8789 |    0.8746 | 0.8789 | 0.8739 |
+
+### Random Forest
+
+![rf_pred](.\plots\models\rf_pred.png)
+![rf_sat](.\plots\models\rf_sat.png)  
+
+![rf_pred2](.\plots\models\rf_pred2.png)
+![rf_sat2](.\plots\models\rf_sat2.png)
+
+### Ensemble Model
+
+![en_pred2](.\plots\models\en_pred1.png)
+![en_sat2](.\plots\models\en_sat1.png)  
+![en_pred2](.\plots\models\en_pred2.png)
+![en_sat2](.\plots\models\en_sat2.png)  
+![en_pred2](.\plots\models\en_pred3.png)
+![en_sat2](.\plots\models\en_sat3.png)  
 
 
 ## License
