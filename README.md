@@ -49,8 +49,18 @@ In other words _**ONLY**_ the code is covered by the LICENSE, the rest is not.
 
 To install the dependencies in a virtual environment of your choice.
 
+#### Installing dependencies one by one
+
 ```shell
-pip install -r requirement.txt
+pip install "name of the package to install"
+```
+
+#### From a file
+
+This will install all the dependencies from the `requirements.txt` file.
+
+```shell
+pip install -r requirements.txt
 ```
 ---
 
