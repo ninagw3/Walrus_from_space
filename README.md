@@ -45,6 +45,17 @@ In other words _**ONLY**_ the code is covered by the LICENSE, the rest is not.
 ---
 
 ## Use
+
+### Downloading this code
+
+Using `git`, in the folder of your choice:
+```shell
+git clone https://github.com/ninagw3/Walrus_from_space.git
+cd Walrus_from_space
+```
+
+You are now in the project folder.
+
 ### Installing dependencies
 
 To install the dependencies in a virtual environment of your choice.
