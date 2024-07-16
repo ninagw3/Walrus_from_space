@@ -187,7 +187,7 @@ Euclidean distance between spectrum across all islands
 Jeffries-Matusita distance between spectrum across all islands  
 ![Jeffries-Matusita distance between spectrum across all islands](./plots/spectral/JM_dist_all_island.png "Jeffries-Matusita distance between spectrum across all islands.")
 
-### Class imbalance stats
+### Statical differences between spectral profiles of clasess 
 `3_class_imbalance/class_imbalance_using_spectral.ipynb`
 
 Multiple Comparison of Means - Tukey HSD, FWER=0.05           
